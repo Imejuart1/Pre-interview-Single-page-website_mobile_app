@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .Single-page_website{
     display: flex;
