@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    overflow: hidden;
+}
 .Single-page_website{
     display: flex;
     flex-direction: column;
@@ -70,4 +73,36 @@ a{
 }
 .project li{
    margin-top: 0.5rem;
+}
+.left_half .experience{
+ 
+    margin-top: 0.5rem;
+}
+.education h2{
+    margin-top: 2rem;
+     margin-bottom: 0.5rem;
+}
+.eee{
+      display: grid;
+    grid-template-columns: 70% 30%;
+    margin-top:1rem;
+    gap:5vw;
+}
+.eee_describe1{
+    display: flex;
+    flex-direction: column;
+   gap:0.5rem;
+}
+
+.eee_describe2{
+    display: flex;
+    flex-direction: column;
+   gap:0.5rem;
+   margin-bottom: 0.5rem;
+}
+.project_heading{
+    display: flex;
+    flex-direction: row;
+    gap:13vw;
+    justify-content: space-between;
 }
