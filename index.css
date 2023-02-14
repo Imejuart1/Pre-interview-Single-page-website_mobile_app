@@ -42,10 +42,7 @@ body{
 .right_half{
     margin-top:0.5rem;
 }
-.right_half .profile{
-   margin-left: 10vw;
-   margin-bottom: 1rem;
-}
+
 .right_half_main img{
     width:20%;
      margin-left: 7vw;
