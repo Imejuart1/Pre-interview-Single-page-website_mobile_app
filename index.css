@@ -1,44 +1,110 @@
-*{
+/* Resetting some styles */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.678);
+    border-radius: 22px;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    background: transparent;
+   
+  }
+
+body {
     overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: "AvenirNext-Regular", "Open Sans", sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    scroll-behavior: smooth;/* Set a fallback font */
 }
-.Single-page_website{
+
+/* Header Styles */
+.header_box {
+    background-color: #ffc400; /* Header background color */
+    border: 1px solid #ffffff;
+    color: #000000;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.header_box:hover {
+    background-color: #000000;
+    color: #ffc400;
+    border: 1px solid #ffc400; /* Hover color */
+}
+
+/* Main Container */
+.Single-page_website {
     display: flex;
     flex-direction: column;
     margin-left: 2vw;
     margin-right: 2vw;
     margin-top: 0.2rem;
-
-}
-.header_box{
-    background-color: black;
-    border: 1px solid black;
-    height:2rem;
-    color:white;
-    text-align: center;
+    background-color: #ffffff; /* Background color for the main container */
 }
 
-.CV-container{
+/* CV Container */
+.CV-container {
     display: grid;
-    grid-template-columns: 50% 50%;
-   font-size: 1.06vw;
+    grid-template-columns: 35% 65%;
+    font-size: 1.06vw;
+    /* Background color for the CV container */
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
 }
-.CV-container h1{
-     text-align: center;
+
+.CV-container:hover {
+    /*background-color: #f4f4f4; *//* Hover color for the CV container */
 }
-.right_half_main{
+
+/* Right Half Styles */
+.right_half_main {
+    background-color:  #ffc400;
+    color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
-   }
+    overflow-y: auto;
+    height: 100vh;
+    margin: -10px;
+    padding: 20px;
+    border-radius: 8px;
+    width:100%;
+    padding-bottom: 10rem !important;
+    cursor: pointer;
+}
+
+/* Rest of your styles remain the same */
+
 .summary{
-    width:70%;
+    width:100%;
+}
+.summary:hover{
+    width:100%;
 }
 .right_half{
     margin-top:0.5rem;
+  
+}
+.right_half:hover{
+    background-color: #000000;
+    color: #ffc400;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    border-radius: 8px;
+
+    margin:20px;
+    padding: 10px;
 }
 
 .right_half_main img{
@@ -67,12 +133,26 @@ a{
     flex-direction: column;
     margin-top:1rem;
 }
+.project:hover{
+    margin:30px;
+    cursor: pointer;
+    
+}
 .project li{
    margin-top: 0.5rem;
+}
+.left_half{
+ color:black;
+ overflow-y: auto;
+ overflow-x: hidden;
+ height: 100vh;
 }
 .left_half .experience{
  
     margin-top: 0.5rem;
+}
+.education{
+    margin-bottom: 10rem !important;
 }
 .education h2{
     margin-top: 2rem;
@@ -95,6 +175,10 @@ a{
     flex-direction: column;
    gap:0.5rem;
    margin-bottom: 0.5rem;
+}
+.sch:hover{
+    margin: 20px;
+    cursor: pointer;
 }
 .project_heading{
     display: flex;
