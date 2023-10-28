@@ -6,8 +6,270 @@
         <title>Augustus CV</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="index.css">
+        <!--<link rel="stylesheet"type="text/css"  href="index.css">-->
     </head>
+    <style>
+       /* Resetting some styles */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.678);
+    border-radius: 22px;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    background: transparent;
+   
+  }
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: "AvenirNext-Regular", "Open Sans", sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    scroll-behavior: smooth;/* Set a fallback font */
+}
+
+/* Header Styles */
+.header_box {
+    background-color: #ffc400; /* Header background color */
+    border: 1px solid #ffffff;
+    color: #000000;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.header_box:hover {
+    background-color: #000000;
+    color: #ffc400;
+    border: 1px solid #ffc400; /* Hover color */
+}
+
+/* Main Container */
+.Single-page_website {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 0.2rem;
+    background-color: #ffffff; /* Background color for the main container */
+}
+
+/* CV Container */
+.CV-container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    font-size: 1.06vw;
+    /* Background color for the CV container */
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.CV-container:hover {
+    /*background-color: #f4f4f4; *//* Hover color for the CV container */
+}
+
+/* Right Half Styles */
+.right_half_main {
+    background-color:  #ffc400;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100vh;
+    margin: -10px;
+    padding: 20px;
+    border-radius: 8px;
+    width:100%;
+    padding-bottom: 10rem !important;
+    cursor: pointer;
+}
+
+/* Rest of your styles remain the same */
+
+.summary{
+    width:100%;
+}
+.summary:hover{
+    width:100%;
+}
+.right_half{
+    margin-top:0.5rem;
+  
+}
+.right_half:hover{
+    background-color: #000000;
+    color: #ffc400;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    border-radius: 8px;
+
+    margin:20px;
+    padding: 10px;
+}
+
+.right_half_main img{
+    width:15vw;
+    height:25vh;
+     margin-left: 7vw;
+}
+.split-skills{
+      display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1%;
+}
+ul{
+ list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.websites{
+  margin-top:0.5rem;
+  display: flex;
+  flex-direction: column;  
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    margin-top:1rem;
+}
+.project:hover{
+    margin:30px;
+    cursor: pointer;
+    
+}
+.project li{
+   margin-top: 0.5rem;
+}
+.left_half{
+ color:black;
+ overflow-y: auto;
+ overflow-x: hidden;
+ height: 100vh;
+}
+.left_half .experience{
+ 
+    margin-top: 0.5rem;
+}
+.education{
+    margin-bottom: 10rem !important;
+}
+.education h2{
+    margin-top: 2rem;
+     margin-bottom: 0.5rem;
+}
+.eee{
+      display: grid;
+    grid-template-columns: 70% 30%;
+    margin-top:1rem;
+    gap:5vw;
+}
+.eee_describe1{
+    display: flex;
+    flex-direction: column;
+   gap:0.5rem;
+}
+
+.eee_describe2{
+    display: flex;
+    flex-direction: column;
+   gap:0.5rem;
+   margin-bottom: 0.5rem;
+}
+.sch:hover{
+    margin: 20px;
+    cursor: pointer;
+}
+.project_heading{
+    display: flex;
+    flex-direction: row;
+    gap:13vw;
+    justify-content: space-between;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*mobile responsive*/
+@media only screen and (max-width: 768px) {
+.CV-container{
+
+   font-size: 1.5vw;
+}
+
+.right_half_main img{
+    width:25vw;
+    height:25vh;
+     margin-left: 7vw;
+}
+}
+
+@media only screen and (max-width: 600px) {
+.CV-container{
+    display: grid;
+    grid-template-columns: 100%;
+   font-size: 2.2vw;
+}
+
+.right_half_main img{
+    width:20vw;
+    height:8vh;
+     margin-left: 7vw;
+}
+.header_box{
+    height:1rem;
+}
+.header_box  h1{
+font-size:15px;
+}
+.education h2{
+    margin-top: 0.3rem;
+     margin-bottom: 0.5rem;
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    margin-top:0.3rem;
+}
+.right_half{
+    margin-top:0rem;
+}
+.websites{
+  margin-top:0rem;
+}
+}
+      </style>
     <body>
         <div class="Single-page_website">
 
@@ -24,7 +286,7 @@
         <hr style="width:80%;text-align:left;margin-left:0">
         </div>
 
-        <div class="right_half">
+        <!--<div class="right_half">
            
         <div class="slideshow-container">
         
@@ -69,10 +331,17 @@
             <span class="dot"></span>
         </div>
 
-        </div>
+        </div>-->
 
         <div class="right_half">
             <h3>SUMMARY</h3>
+            <hr style="width:80%;text-align:left;margin-left:0">
+            <p class="summary">Software development professional with experience in developing and designing web applications using HTML, CSS, JavaScript, Angular, Node.js, and React. Adept at developing and deploying complex backend systems, web services and databases.
+                Knowledgeable software engineering professional with experience building, testing and deploying scalable and modular software products. Organised and hardworking team player. Uses strong interpersonal skills to work well with internal and external stakeholders to meet project technical requirements.</p>
+        </div>
+
+        <div class="right_half">
+            <h3>CONTACT</h3>
             <hr style="width:80%;text-align:left;margin-left:0">
             <p class="summary">Software development professional with experience in developing and designing web applications using HTML, CSS, JavaScript, Angular, Node.js, and React. Adept at developing and deploying complex backend systems, web services and databases.
                 Knowledgeable software engineering professional with experience building, testing and deploying scalable and modular software products. Organised and hardworking team player. Uses strong interpersonal skills to work well with internal and external stakeholders to meet project technical requirements.</p>
