@@ -114,7 +114,7 @@ a{
     margin-top:0.5rem;
   
 }
-.right_half:hover{
+{/*.right_half:hover{
     background-color: #000000;
     color: #ffc400;
     border: 3px solid rgb(0, 0, 0);
@@ -125,7 +125,7 @@ a{
 
     margin:20px;
     padding: 10px;
-}
+}*/}
 
 .right_half_main img{
     width:15vw;
@@ -232,36 +232,52 @@ a{
 
 /*mobile responsive*/
 @media only screen and (max-width: 768px) {
-.CV-container{
 
-   font-size: 1.5vw;
-}
-
-.right_half_main img{
-    width:25vw;
-    height:25vh;
-     margin-left: 7vw;
-}
 }
 
 @media only screen and (max-width: 600px) {
+
 .CV-container{
-    display: grid;
-    grid-template-columns: 100%;
-   font-size: 2.2vw;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+   font-size: 16px;
+   margin: 0;
+   padding: 0;
+   border: none;
+   border: none;
+    box-shadow: none;
+}
+.right_half_main{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    overflow-x: scroll;
+    height:30vh;
+    width:100%;
+    margin: 0;
+
+
+}
+.left_half{
+    padding-bottom: 20rem;
 }
 
+.right_half{
+    min-width: 100%;
+}
+.right_half:hover{
+    
+}
+.noprofile{
+    display: none;
+}
 .right_half_main img{
     width:20vw;
     height:8vh;
-     margin-left: 7vw;
+    margin-left: 7vw;
 }
-.header_box{
-    height:1rem;
-}
-.header_box  h1{
-font-size:15px;
-}
+
 .education h2{
     margin-top: 0.3rem;
      margin-bottom: 0.5rem;
@@ -289,61 +305,12 @@ font-size:15px;
         <a class=" header_box" href="">SEE CV IN HTML</a>
     </a>
        <div class="CV-container">
+      
         <div class="right_half_main">
-           
-        <div class="right_half">
-         
-         <h2 class="profile">PROFILE</h2>
-        <hr style="width:80%;text-align:left;margin-left:0">
+            <div class="noprofile">
+            <h2 class="profile">PROFILE</h2>
+            <hr style="width:80%;text-align:left;margin-left:0">
         </div>
-
-        <!--<div class="right_half">
-           
-        <div class="slideshow-container">
-        
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 5</div>
-                  <img src="images/meju1.PNG">
-               
-            </div>
-        
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 5</div>
-                <img src="images/meju2.PNG">
-                
-            </div>
-        
-            <div class="mySlides fade">
-                <div class="numbertext">3 / 5</div>
-                <img src="images/meju3.PNG">
-            
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">4 / 5</div>
-                <img src="images/meju4.PNG">
-                
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">5 / 5</div>
-                <img src="images/meju5.PNG">
-              
-            </div>
-        
-        </div>
-        <br>
-        
-        <div style="text-align:center; display : none;">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-
-        </div>-->
-
         <div class="right_half">
             <h3>SUMMARY</h3>
             <hr style="width:80%;text-align:left;margin-left:0">
@@ -641,3 +608,52 @@ font-size:15px;
         </script>
     </body>
 </html>
+
+
+
+<!--<div class="right_half">
+           
+        <div class="slideshow-container">
+        
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                  <img src="images/meju1.PNG">
+               
+            </div>
+        
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="images/meju2.PNG">
+                
+            </div>
+        
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="images/meju3.PNG">
+            
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="images/meju4.PNG">
+                
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="images/meju5.PNG">
+              
+            </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center; display : none;">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        </div>-->
